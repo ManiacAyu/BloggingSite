@@ -59,7 +59,7 @@ public class AuthController {
 	private CustomeUserDetailsServiceImplementation customUserDetails;
 	
 	
-	 private static final String GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID";
+	 private static final String GOOGLE_CLIENT_ID = "1058591672216-3a91r653592vpsh2lekel252fjh784b7.apps.googleusercontent.com";
 	
 	
 	public AuthController(

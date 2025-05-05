@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const clientId="961098686120-p4pulrerjjelk6bhsbegd84m4r4mbdk7.apps.googleusercontent.com"
+const clientId="1058591672216-3a91r653592vpsh2lekel252fjh784b7.apps.googleusercontent.com"
 root.render(
   <React.StrictMode>
     <Provider store={store}>

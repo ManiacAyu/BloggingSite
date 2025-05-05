@@ -72,6 +72,7 @@ export const loginUser = (loginData) => async (dispatch) => {
   dispatch(loginRequest());
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/signin`, loginData);
+    console.log(response)
     const user = response.data;
     console.log("login user -: ", user);
     if (user.jwt) {
