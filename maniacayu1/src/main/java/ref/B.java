@@ -1,4 +1,0 @@
-package ref;
-
-public class B {
-}

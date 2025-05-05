@@ -1,4 +1,0 @@
-package com.springcore;
-
-public class App {
-}
