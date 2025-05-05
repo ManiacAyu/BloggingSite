@@ -2,23 +2,17 @@ FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
-# Copy the pom.xml and mvnw scripts first
-COPY pom.xml mvnw ./
-
-# Grant execute permissions to mvnw script
-RUN chmod +x mvnw
-
-# Now, copy the rest of the .mvn directory and other necessary files
-COPY .mvn .mvn
-
-# Run Maven offline dependencies step
-RUN ./mvnw dependency:go-offline
-
-# Copy the rest of the source code
+# Copy everything in one go
 COPY . .
 
-# Run Maven to build the package (skipping tests)
+# Now make sure mvnw is executable
+RUN chmod +x mvnw
+
+# Pre-fetch dependencies
+RUN ./mvnw dependency:go-offline
+
+# Build the application (skip tests for speed)
 RUN ./mvnw clean package -DskipTests
 
-# Run the application
-CMD ["java", "-jar", "target/*.jar"]
+# Run the jar
+CMD ["java", "-jar", "target/twitter-0.0.1-SNAPSHOT.jar"]
