@@ -53,7 +53,8 @@ public class AppConfig {
                 cfg.setAllowedOrigins(Arrays.asList(
                     "http://localhost:3000",
                     "http://localhost:4000",
-                    "http://localhost:4200"
+                    "http://localhost:4200",
+						"https://blogging-site-git-main-maniacayus-projects.vercel.app"
                 ));
                 cfg.setAllowedMethods(Collections.singletonList("*"));
                 cfg.setAllowCredentials(true);
